@@ -1,21 +1,35 @@
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Frutiger Neue', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #fff;
     color: #333;
 }
 
 header {
-    background-color: #0066cc;
-    color: white;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    height: 50px;
+    margin-right: 20px;
 }
 
 h1 {
     margin: 0;
     font-size: 1.8rem;
+    font-weight: 400;
+    color: #0b0a0f;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -41,6 +55,7 @@ h1 {
     flex-direction: column;
     text-decoration: none;
     color: inherit;
+    border: 1px solid #e5e5e5;
 }
 
 .tool-card:hover {
@@ -79,10 +94,27 @@ h1 {
 }
 
 footer {
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
+    border-top: 1px solid #e5e5e5;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #666;
+}
+
+/* I14Y Button styles */
+.i14y-button {
+    background-color: #0f76bd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.i14y-button:hover {
+    background-color: #0a5a8e;
 }
