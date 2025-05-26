@@ -1,61 +1,127 @@
+:root {
+    --primary-color: #e60000;
+    --text-color: #15141A;
+    --secondary-text: #5B5B66;
+    --background-light: #F0F0F4;
+    --header-height: 64px;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.15;
+}
+
 body {
-    font-family: 'Frutiger Neue', 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    width: 100%;
     background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 1rem 2rem;
+    border-bottom: 5px solid #dc0018;
+    padding: 0 6px 2px 2px;
+}
+
+.layout-brand {
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-.header-logo {
-    height: 50px;
-    margin-right: 20px;
+.logo {
+    width: 215px;
+    padding: 20px 15px;
 }
 
-h1 {
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header-title {
+    font-family: Roboto, sans-serif;
+    font-size: 26.4px;
+    color: rgb(117, 117, 117);
     margin: 0;
-    font-size: 1.8rem;
+    padding-left: 20px;
+    border-left: 1px solid lightgrey;
     font-weight: 400;
-    color: #0b0a0f;
 }
 
-.main-title {
-    display: flex;
-    align-items: center;
+main {
+    margin-top: var(--header-height);
+    padding-top: 32px;
+    min-height: calc(100vh - var(--header-height));
 }
 
-.container {
+.content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
+h1 {
+    font-family: Roboto, sans-serif;
+    font-size: 2.5rem;
+    line-height: 34px;
+    font-weight: 400;
+    margin: 2.8rem 0 1.68rem 0;
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    font-size: 1.25em;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+/* Tool grid styles */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
 }
 
 .tool-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #e5e5e5;
 }
 
 .tool-card:hover {
@@ -90,31 +156,54 @@ h1 {
 
 .tool-description {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--secondary-text);
+}
+
+a {
+    color: #14516f;
 }
 
 footer {
-    background-color: #f7f7f7;
-    border-top: 1px solid #e5e5e5;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #666;
+    background: var(--background-light);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    width: 100%;
+    border-top: 1px solid #d5d5d5;
 }
 
-/* I14Y Button styles */
-.i14y-button {
-    background-color: #0f76bd;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
+.footer-content {
+    width: 100%;
+    padding: 0 24px;
 }
 
-.i14y-button:hover {
-    background-color: #0a5a8e;
+.footer-content p {
+    margin: 0;
+    color: var(--secondary-text);
+    padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .tool-card {
+        padding: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
 }
