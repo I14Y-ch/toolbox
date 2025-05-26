@@ -103,8 +103,9 @@ h2 {
 /* API Links (Tool Grid) */
 .api-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
 
 .api-card {
@@ -117,6 +118,11 @@ h2 {
     color: inherit;
     display: flex;
     flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /* Center cards in their grid cell */
+    aspect-ratio: 2/3; /* Playing card ratio */
 }
 
 .api-card:hover {
@@ -171,6 +177,24 @@ footer {
     color: var(--secondary-text);
 }
 
+/* Beta Badge */
+.beta-badge {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: #dc0018;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px 30px;
+    text-transform: uppercase;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateX(30%) translateY(0%) rotate(45deg) translateX(30%);
+    transform-origin: top right;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 768px) {
     .content-wrapper {
         padding: 1rem;
@@ -182,6 +206,11 @@ footer {
     
     .api-card {
         padding: 1.5rem;
+    }
+    
+    .beta-badge {
+        font-size: 0.7rem;
+        padding: 3px 25px;
     }
 }
 
