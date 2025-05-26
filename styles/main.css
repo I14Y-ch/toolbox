@@ -220,4 +220,13 @@ footer {
     }
 }
 
-@media only screen and
+@media only screen and (max-width: 480px) {
+    .header-title {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 180px;
+        padding: 15px 10px;
+    }
+}
