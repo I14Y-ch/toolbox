@@ -29,6 +29,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
+      - name: Setup upload-artifact
+        uses: actions/upload-artifact@v3
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
