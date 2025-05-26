@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: https:; default-src 'self';">
     <title>I14Y Toolbox</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="static/img/favicon.ico">
 </head>
 <body>
@@ -13,30 +14,31 @@
         <div class="header-wrapper">
             <div class="layout-brand">
                 <div class="logo">
-                    <img src="static/img/logo.svg" alt="I14Y Logo">
+                    <a href="https://i14y.admin.ch">
+                        <img src="static/img/logo.svg" alt="Logo Eidgenossenschaft">
+                    </a>
                 </div>
-                <h1 class="header-title">Toolbox</h1>
+                <h1 class="header-title">I14Y Toolbox</h1>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="intro">
-            <p>The I14Y Toolbox contains experimental helper applications for the I14Y Interoperability Platform, 
-            Switzerland's governmental data catalog. These tools facilitate efficient data imports and exports.</p>
-        </div>
-
         <div class="content-wrapper">
-            <div class="tools-grid">
+            <h1>I14Y Toolbox</h1>
+            <div class="intro">
+                <p>The I14Y Toolbox contains experimental helper applications for the I14Y Interoperability Platform, 
+                Switzerland's governmental data catalog. These tools facilitate efficient data imports and exports.</p>
+            </div>
+
+            <div class="api-links">
                 <!-- Excel Upload Tool -->
-                <a href="https://i14y-excel-upload-7ahld.ondigitalocean.app/" class="tool-card" target="_blank">
+                <a href="https://i14y-excel-upload-7ahld.ondigitalocean.app/" class="api-card" target="_blank">
                     <div class="tool-logo">
                         <img src="static/img/i14y-excel-upload.jpg" alt="Logo I14Y Excel Upload">
                     </div>
-                    <div class="tool-info">
-                        <div class="tool-title">I14Y Excel Upload</div>
-                        <div class="tool-description">Upload Excel inventary to I14Y</div>
-                    </div>
+                    <h2>I14Y Excel Upload</h2>
+                    <p>Upload Excel inventary to I14Y</p>
                 </a>
                 
                 <!-- More tools will be added here as needed -->
@@ -46,7 +48,7 @@
     
     <footer>
         <div class="footer-content">
-            <p><a href="https://i14y.admin.ch" target="_blank">I14Y.admin.ch</a></p>
+            <p>© 2024 <a href="https://i14y.admin.ch" target="_blank">I14Y.admin.ch</a></p>
         </div>
     </footer>
 </body>
