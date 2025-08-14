@@ -1,14 +1,14 @@
 # I14Y Toolbox
 
-A collection of helper tools for I14Y integration and management.
-
-## Description
-
-The I14Y Toolbox provides a central hub for accessing various tools that help with I14Y operations. Each tile on the main page links to a specific tool with specialized functionality.
+The I14Y Toolbox serves as a centralized hub for accessing a variety of tools designed to streamline I14Y operations. Each tile on the main page links to a specific tool, offering specialized functionality. Changes to this repository are automatically deployed to [GitHub Pages](https://i14y-ch.github.io/toolbox/) via a GitHub Action.
 
 ## Available Tools
 
-- **Excel Upload Tool**: Upload and process Excel files related to I14Y
+- **Excel Upload Tool**: Upload and process Excel files to extract metadata and upload it to I14Y.
+- **Keyword Generator**: Create keywords to enhance your dataset descriptions on I14Y.
+- **Concept Import Tool**: Import concepts from a spreadsheet table to the interoperability platform I14Y
+- **Swagger2I14Y Import Tool**: Use your technical API specification (Swagger) to generate an API description on I14Y.
+- **SHACL Generator**: Generate the description of a data structure in the SHACL format for upload to I14Y.
 
 ## Development
 
