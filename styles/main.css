@@ -180,8 +180,8 @@ footer {
 /* Beta Badge - Improved visibility */
 .beta-badge {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 50px; /* Moved down slightly */
+    right: -5px; /* Moved to the left slightly */
     z-index: 10000; /* Increased z-index to ensure it's in the foreground */
     background-color: #dc0018;
     color: white;
@@ -190,7 +190,7 @@ footer {
     padding: 8px 40px; /* Larger padding */
     text-transform: uppercase;
     box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.3); /* More prominent shadow */
-    transform: translateX(30%) translateY(0%) rotate(45deg) translateX(30%);
+    transform: translateX(20%) translateY(20%) rotate(45deg); /* Adjusted position */
     transform-origin: top right;
     letter-spacing: 1px;
     pointer-events: none; /* Prevents the badge from interfering with clicks */
