@@ -74,9 +74,9 @@ main {
 }
 
 .content-wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 0.75rem;
 }
 
 h1 {
@@ -100,6 +100,40 @@ h2 {
     margin-bottom: 3rem;
 }
 
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    justify-content: flex-start;
+}
+
+.filter-btn {
+    background-color: #ffffff;
+    border: 2px solid #dc0018;
+    color: #dc0018;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter-btn:hover {
+    background-color: #dc0018;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 0, 24, 0.2);
+}
+
+.filter-btn.active {
+    background-color: #dc0018;
+    color: white;
+}
+
 /* API Links (Tool Grid) */
 .api-links {
     display: grid;
@@ -116,10 +150,11 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
     overflow: hidden;
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
-    padding: 24px;
+    padding: 0;
     max-width: 320px;
     width: 100%;
     height: 100%;
@@ -133,19 +168,24 @@ h2 {
 }
 
 .card-main-link {
-    display: block;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
     text-decoration: none;
     color: inherit;
+    flex: 1;
+    min-height: 0;
 }
 
 .api-card h2 {
     margin-top: 1rem;
+    font-size: 1.5rem;
 }
 
 .api-card p {
     color: var(--secondary-text);
     flex-grow: 1;
+    font-size: 1rem;
 }
 
 .tool-logo {
@@ -160,6 +200,24 @@ h2 {
 .tool-logo img {
     max-width: 100%;
     max-height: 120px;
+}
+
+/* Card Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.tag {
+    background-color: #f0f0f4;
+    color: #5B5B66;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 a {
@@ -226,11 +284,11 @@ a {
 }
 
 footer {
-    background: var(--background-light);
+    background: #f7f7f7;
     padding: 2rem 0;
     margin-top: 4rem;
     width: 100%;
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #e0e0e0;
 }
 
 .footer-content {
@@ -238,11 +296,71 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.footer-content p {
+.footer-links h3 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    color: var(--secondary-text);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links ul li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.footer-info {
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+.footer-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .footer-info {
+        margin-left: 0;
+    }
 }
 
 /* Beta Badge - Improved visibility */

@@ -26,25 +26,37 @@
 
     <main>
         <div class="content-wrapper">
-            <h1>I14Y Toolbox</h1>
+            <h1>Mini-apps for import, export, and metadata refinement on I14Y</h1>
             <div class="intro">
-                <p>The I14Y Toolbox contains experimental helper applications for the I14Y Interoperability Platform, 
-                Switzerland's governmental data catalog. These tools facilitate efficient data imports and exports.</p>
-                <p>All webapps are experimental, quickly built, and often altered. There is no warranty provided. 
+                <p>The I14Y Toolbox contains experimental helper applications for the I14Y Interoperability platform, 
+                    Switzerland's governmental data catalog. These tools facilitate efficient data imports and exports 
+                    and the refinement and visualisation of metadata.</p>
+                <p>All webapps are experimental, quickly built, and often altered. There is no warranty provided.
                 Depending on the application, hosting may currently not be on the infrastructure of the confederation. 
                 In some cases, it might be better to run the application on premise. The codes and instructions are 
                 available in the <a href="https://github.com/I14Y-ch" target="_blank">GitHub repository of I14Y</a>.</p>
             </div>
 
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="import-export">Import & Export</button>
+                <button class="filter-btn" data-filter="refinement">Refinement</button>
+                <button class="filter-btn" data-filter="structure">Structure</button>
+                <button class="filter-btn" data-filter="visualization">Visualization</button>
+            </div>
+
             <div class="api-links">
                 <!-- Excel Upload Tool -->
-                <div class="api-card">
+                <div class="api-card" data-tags="import-export">
                     <a href="https://i14y-excel-upload-7ahld.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/i14y-excel-upload.jpg" alt="Logo I14Y Excel Upload">
                         </div>
-                        <h2>Excel Upload</h2>
+                        <h2>Import Excel Inventory</h2>
                         <p>Easily import your Excel-based dataset inventory to the I14Y Interoperability Platform with this tool.</p>
+                        <div class="card-tags">
+                            <span class="tag">Import & Export</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/excel_upload/" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -56,13 +68,16 @@
                 </div>
 
                 <!-- Keyword Generator -->
-                <div class="api-card">
+                <div class="api-card" data-tags="refinement">
                     <a href="https://i14y-keyword-generator-dwjgh.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/i14y-keyword-generator.png" alt="Logo I14Y Keyword Generator">
                         </div>
                         <h2>Keyword Generator</h2>
                         <p>Create keywords to enhance your dataset descriptions on I14Y.</p>
+                        <div class="card-tags">
+                            <span class="tag">Refinement</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/keyword_generato" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -74,13 +89,16 @@
                 </div>
                 
                 <!-- Concept Import Tool -->
-                <div class="api-card">
+                <div class="api-card" data-tags="import-export">
                     <a href="https://i14y-toolbox-concept-input-osq8i.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/i14y-concept-import.png" alt="Logo I14Y Concept Import">
                         </div>
                         <h2>Concept Import</h2>
                         <p>Import concepts from a spreadsheet table to the I14Y Interoperability Platform.</p>
+                        <div class="card-tags">
+                            <span class="tag">Import & Export</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/toolbox_concept_input" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -92,13 +110,16 @@
                 </div>
 
                 <!-- Swagger2I14Y Import Tool -->
-                <div class="api-card">
+                <div class="api-card" data-tags="import-export">
                     <a href="https://swagger2i14y-df4wv.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/swagger2dcat.jpg" alt="Logo I14Y Concept Import">
                         </div>
                         <h2>Swagger to I14Y</h2>
                         <p>Use your technical API specification (Swagger) to generate an API description on I14Y.</p>
+                        <div class="card-tags">
+                            <span class="tag">Import & Export</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/swagger2dcat" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -110,13 +131,16 @@
                 </div>
 
                 <!-- SHACL Scripts -->
-                <div class="api-card">
+                <div class="api-card" data-tags="structure">
                     <a href="https://octopus-app-hwzps.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/i14y-shacl-generator.png" alt="Logo I14Y Shacl Generator">
                         </div>
                         <h2>Convert to SHACL</h2>
                         <p>Generate the description of a data structure in the SHACL format. Use your actual data to start with.</p>
+                        <div class="card-tags">
+                            <span class="tag">Structure</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/toolbox_shacl" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -126,14 +150,18 @@
                         </svg>
                     </a>
                 </div>
-                <!-- SHACL Editor -->
-                <div class="api-card">
+                <!-- I14Y Data Structure Editor -->
+                <div class="api-card" data-tags="structure">
                     <a href="https://toolbox-structure-generator-69spw.ondigitalocean.app/" class="card-main-link" target="_blank">
                         <div class="tool-logo">
                             <img src="static/img/i14y-shacl-generator.png" alt="Logo I14Y Shacl Generator">
                         </div>
-                        <h2>SHACL-Editor</h2>
-                        <p>Do you need to manually describe a data structure? Do you want to edit an existing structure? Try out our simple structure editor.</p>
+                        <h2>Data Structure Editor</h2>
+                        <p>Do you need to manually describe a data structure? Do you want to edit an existing structure? Try out our simple data structure editor.</p>
+                        <div class="card-tags">
+                            <span class="tag">Structure</span>
+                            <span class="tag">Import & Export</span>
+                        </div>
                     </a>
                     <a href="https://github.com/I14Y-ch/structure_generator" class="github-corner" target="_blank" aria-label="View source on GitHub">
                         <svg width="30" height="30" viewBox="0 0 250 250" aria-hidden="true">
@@ -149,8 +177,51 @@
     
     <footer>
         <div class="footer-content">
-            <p><a href="https://i14y.admin.ch" target="_blank">I14Y.admin.ch</a></p>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://www.bfs.admin.ch/bfs/de/home/bfs/bundesamt-statistik/rechtliche-hinweise.html" target="_blank">Rechtliche Hinweise</a></li>
+                    <li><a href="https://github.com/i14y-ch" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/showcase/i14y/about/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://apiconsole.i14y.admin.ch/" target="_blank">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>© 2025 Bundesamt für Statistik</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.api-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter cards
+                    cards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = '';
+                        } else {
+                            const cardTags = card.getAttribute('data-tags');
+                            if (cardTags && cardTags.includes(filter)) {
+                                card.style.display = '';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
