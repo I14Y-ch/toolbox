@@ -137,9 +137,9 @@ h2 {
 /* API Links (Tool Grid) */
 .api-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, 320px);
     gap: 2rem;
-    justify-content: center;
+    justify-content: start;
 }
 
 .api-card {
@@ -158,7 +158,7 @@ h2 {
     max-width: 320px;
     width: 100%;
     height: 100%;
-    margin: 0 auto; /* Center cards in their grid cell */
+    margin: 0; /* Align cards to the left */
     aspect-ratio: 2/3; /* Playing card ratio */
 }
 
