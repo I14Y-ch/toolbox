@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3cm" height="3cm" viewBox="0 0 300 300">
+  <!-- Farb- und Stildefinitionen -->
+  <defs>
+    <style>
+      .bg { fill: #A7D8F0; }                   /* Hellblau Hintergrundkreis */
+      .screen { fill: #FFFFFF; stroke: #555; stroke-width: 4; }
+      .stand { fill: #555; }
+      .node { fill: #E53935; }                 /* Rot für Knoten */
+      .edge { stroke: #555; stroke-width: 3; stroke-linecap: round; }
+      .glass { fill: none; stroke: #555; stroke-width: 4; }  /* Lupe */
+      .glass-highlight { fill: none; stroke: #E53935; stroke-width: 3; } /* roter Akzent */
+    </style>
+  </defs>
+
+  <!-- Hintergrundkreis -->
+  <circle class="bg" cx="150" cy="150" r="140"/>
+
+  <!-- Großer Monitor -->
+  <rect class="screen" x="55" y="65" width="190" height="130" rx="12"/>
+  <!-- Monitor-Stand -->
+  <rect class="stand" x="120" y="205" width="60" height="16" rx="3"/>
+
+  <!-- Visualisierter Graph (5 Knoten, leicht komplexe Verbindung) -->
+  <!-- Kanten -->
+  <line class="edge" x1="95"  y1="105"  x2="150" y2="120"/>
+  <line class="edge" x1="150" y1="120" x2="205" y2="105"/>
+  <line class="edge" x1="150" y1="120" x2="180" y2="160"/>
+  <line class="edge" x1="150" y1="120" x2="120" y2="160"/>
+  <line class="edge" x1="120" y1="160" x2="180" y2="160"/>
+  <line class="edge" x1="95"  y1="105"  x2="120" y2="160"/>
+  <line class="edge" x1="205" y1="105"  x2="180" y2="160"/>
+
+  <!-- Knoten -->
+  <circle class="node" cx="95"  cy="105"  r="8"/>
+  <circle class="node" cx="150" cy="120" r="8"/>
+  <circle class="node" cx="205" cy="105"  r="8"/>
+  <circle class="node" cx="120" cy="160" r="8"/>
+  <circle class="node" cx="180" cy="160" r="8"/>
+
+  <!-- Lupensymbol: kreisförmiges Glas + Griff, unten rechts über dem Monitor -->
+  <!-- Kreis des Glases -->
+  <circle class="glass" cx="215" cy="175" r="18"/>
+  <!-- Akzent (kleiner roter Bogen) im Glas -->
+  <path class="glass-highlight" d="M227 175a12 12 0 0 1-12 12" />
+  <!-- Griff der Lupe -->
+  <line class="glass" x1="230" y1="190" x2="250" y2="210"/>
+  <!-- Griff-Endkappe (optional, dezent) -->
+  <circle cx="250" cy="210" r="3" fill="#555"/>
+</svg>
